@@ -1,0 +1,19 @@
+[Unit]
+Description=NetOps Dashboard FastAPI backend
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=netops
+Group=netops
+WorkingDirectory=/opt/netops-dashboard
+EnvironmentFile=-/etc/netops-dashboard/backend.env
+ExecStart=/opt/netops-dashboard/.venv/bin/uvicorn app.main:app --app-dir /opt/netops-dashboard/backend --host 127.0.0.1 --port 8000
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
