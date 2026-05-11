@@ -1,0 +1,11 @@
+[profile netops]
+sso_session = netops
+sso_account_id = 000000000000
+sso_role_name = ReadOnlyAccess
+region = us-east-1
+output = json
+
+[sso-session netops]
+sso_start_url = https://your-company.awsapps.com/start
+sso_region = us-east-1
+sso_registration_scopes = sso:account:access
