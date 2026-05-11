@@ -1,0 +1,15 @@
+.DS_Store
+.venv/
+venv/
+__pycache__/
+.pycache/
+.pytest_cache/
+tsconfig.tsbuildinfo
+.netops/
+node_modules/
+dist/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
