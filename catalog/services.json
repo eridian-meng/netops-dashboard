@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "architecture-diagram",
+      "name": "Architecture Diagram",
+      "description": "Generate cloud architecture diagrams from live inventory.",
+      "icon": "/icons/architecture.svg",
+      "type": "folder",
+      "provider": "generic",
+      "path": "/architecture-diagram",
+      "children": [
+        {
+          "id": "architecture-diagram-aws",
+          "name": "AWS Architecture Diagram",
+          "description": "Authenticate with AWS SSO and generate an AWS resource diagram.",
+          "icon": "/icons/aws.svg",
+          "type": "script",
+          "provider": "aws",
+          "path": "/architecture-diagram/aws",
+          "scriptPath": "architecture-diagram/aws/generate.py",
+          "auth": {
+            "required": true,
+            "provider": "aws"
+          }
+        },
+        {
+          "id": "architecture-diagram-azure",
+          "name": "Azure Architecture Diagram",
+          "description": "Reserved for Azure inventory and diagram generation.",
+          "icon": "/icons/azure.svg",
+          "type": "service",
+          "provider": "azure",
+          "path": "/architecture-diagram/azure",
+          "auth": {
+            "required": true,
+            "provider": "azure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "audit",
+      "name": "Audit",
+      "description": "Reserved for compliance and cloud resource audit automations.",
+      "icon": "/icons/audit.svg",
+      "type": "service",
+      "provider": "generic",
+      "path": "/audit"
+    },
+    {
+      "id": "vpn-automation",
+      "name": "VPN Automation",
+      "description": "Reserved for VPN operational workflows and access automation.",
+      "icon": "/icons/vpn.svg",
+      "type": "service",
+      "provider": "generic",
+      "path": "/vpn-automation"
+    }
+  ]
+}
